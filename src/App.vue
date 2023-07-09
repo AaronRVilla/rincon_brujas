@@ -15,6 +15,8 @@ import HelloWorld from './components/HelloWorld.vue'
     <!-- <RouterLink to="/cinturones">cinturones</RouterLink> -->
     <!-- <RouterLink to="/zapatillas">zapatillas</RouterLink> -->
     <!-- <RouterLink to="/huaraches">huaraches</RouterLink> -->
+
+    <RouterLink to="/categorias"> categorias </RouterLink>
     <RouterLink to="/inventario">Inventario</RouterLink>
     <RouterLink to="/GenerarVenta">Generar Venta</RouterLink>
     <router-link to="/apartado">Apartado</router-link>
