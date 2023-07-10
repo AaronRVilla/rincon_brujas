@@ -51,7 +51,7 @@ footer{
 }
 .navegacion{
   width: 30%;
-  font-size: 2em;
+  font-size: 1m;
   display: flex;
   gap: 10px;
   text-decoration: none;
