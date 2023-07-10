@@ -25,7 +25,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <div class="cont" style="background-color: rgb(203, 160, 228)">
     <RouterView/>
   </div>
-  <footer style="background-color: bisque;">
+  <footer style="background-color: rgb(132, 91, 147)">
   <div><h2>CONTACTANOS</h2></div>
   <div class="info">
     <div id="face">Facebook</div>
