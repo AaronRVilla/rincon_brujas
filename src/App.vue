@@ -5,8 +5,10 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div class="superior">
-    <!-- <v-btn icon=""></v-btn> -->
+    <img class="logo" src="./imagenes/bruja.ico">
+
     <div class="titulo">El Rincón de las Brujas</div>
+
   <div class="navegacion">
     <RouterLink to="/">Inicio</RouterLink>
     <!-- <RouterLink to="/blusas">blusas</RouterLink> -->
@@ -38,13 +40,16 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <style scoped>
-
+.logo{
+  display: flex;
+  margin-left: -4.5vh;
+}
 .superior{
   display: flex;
   height: 15vh;
   padding: 1%;
   background-color: rgb(132, 91, 147);
-  justify-content: space-between;
+  justify-content: space-around;
 }
 footer{
   height: 20vh;
@@ -52,10 +57,12 @@ footer{
 .titulo{
   width: 32vw;
   font-size: 3em;
+  margin-right: 34vb;
+  margin-left: -9.2vh;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .navegacion{
-  width: 60vw;
+  width: 56.4vw;
   justify-content: center;
   align-items: center;
   font-size: 1m;
