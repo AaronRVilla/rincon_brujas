@@ -22,7 +22,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <router-link to="/apartado">Apartado</router-link>
     <router-link to="/agregarinventario">agregar inventario</router-link>
   </div></div>
-  <div class="cont" style="background-color: gray;">
+  <div class="cont" style="background-color: rgb(203, 160, 228)">
     <RouterView/>
   </div>
   <footer style="background-color: bisque;">
@@ -40,7 +40,7 @@ import HelloWorld from './components/HelloWorld.vue'
   display: flex;
   height: 15vh;
   padding: 1%;
-  background-color: violet;
+  background-color: rgb(132, 91, 147);
 }
 footer{
   height: 20vh;

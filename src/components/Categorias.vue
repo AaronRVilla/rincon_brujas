@@ -4,10 +4,10 @@
 
 <template>
 
-  <div class="ma-4" >
+  <div style="margin-left: 3vb;">
     
     
-    <div class="text-subtitle-2" style="margin: 2vb;"> 
+    <div class="text-subtitle-2" style="padding: 2vb;"> 
       
       <p class="text-h6"> Vestidos</p>
 
@@ -77,7 +77,7 @@
   </div>
 
 
-  <div class="ma-4" >
+  <div class="ma-4">
     
     
     <div class="text-subtitle-2" style="margin: 2vb;"> 

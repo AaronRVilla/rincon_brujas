@@ -44,7 +44,6 @@
 #new-sale-container
 {
       width: 92%;
-      background-color: white;
       margin: auto;
       padding: 25px;
       display: flex;
