@@ -10,7 +10,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <div class="titulo">El Rincón de las Brujas</div>
 
   <div class="navegacion">
-    <RouterLink to="/">Inicio</RouterLink>
+    <RouterLink class="router" to="/">Inicio</RouterLink>
     <!-- <RouterLink to="/blusas">blusas</RouterLink> -->
     <!-- <RouterLink to="/camisas">camisas</RouterLink> -->
     <!-- <RouterLink to="/shorts">shorts</RouterLink> -->
@@ -20,11 +20,11 @@ import HelloWorld from './components/HelloWorld.vue'
     <!-- <RouterLink to="/zapatillas">zapatillas</RouterLink> -->
     <!-- <RouterLink to="/huaraches">huaraches</RouterLink> -->
 
-    <RouterLink to="/categorias"> Categorias </RouterLink>
-    <RouterLink to="/inventario">Inventario</RouterLink>
-    <RouterLink to="/GenerarVenta">Generar Venta</RouterLink>
-    <router-link to="/apartado">Apartado</router-link>
-    <router-link to="/agregarinventario">Agregar inventario</router-link>
+    <RouterLink class="router" to="/categorias"> Categorias </RouterLink>
+    <RouterLink class="router" to="/inventario">Inventario</RouterLink>
+    <RouterLink class="router" to="/GenerarVenta">Generar Venta</RouterLink>
+    <RouterLink class="router" to="/apartado">Apartado</RouterLink>
+    <RouterLink class="router" to="/agregarinventario">Agregar inventario</RouterLink>
   </div></div>
   <div class="cont" style="background-color: rgb(203, 160, 228)">
     <RouterView/>
@@ -62,7 +62,7 @@ footer{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .navegacion{
-  width: 56.4vw;
+  width: 56vw;
   justify-content: center;
   align-items: center;
   font-size: 1m;
@@ -70,6 +70,11 @@ footer{
   gap: 10vh;
   text-decoration: none;
   margin-left: -300px;
+}
+.router
+{
+  text-decoration: none;
+  font-weight: bold;
 }
 .info{
   display: flex;
