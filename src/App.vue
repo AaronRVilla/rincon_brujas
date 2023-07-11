@@ -11,20 +11,13 @@ import HelloWorld from './components/HelloWorld.vue'
 
   <div class="navegacion">
     <RouterLink class="router" to="/">Inicio</RouterLink>
-    <!-- <RouterLink to="/blusas">blusas</RouterLink> -->
-    <!-- <RouterLink to="/camisas">camisas</RouterLink> -->
-    <!-- <RouterLink to="/shorts">shorts</RouterLink> -->
-    <!-- <RouterLink to="/conjuntos">conjuntos</RouterLink> -->
-    <!-- <RouterLink to="/vestidos">vestidos</RouterLink> -->
-    <!-- <RouterLink to="/cinturones">cinturones</RouterLink> -->
-    <!-- <RouterLink to="/zapatillas">zapatillas</RouterLink> -->
-    <!-- <RouterLink to="/huaraches">huaraches</RouterLink> -->
-
     <RouterLink class="router" to="/categorias"> Categorias </RouterLink>
     <RouterLink class="router" to="/inventario">Inventario</RouterLink>
     <RouterLink class="router" to="/GenerarVenta">Generar Venta</RouterLink>
     <RouterLink class="router" to="/apartado">Apartado</RouterLink>
     <RouterLink class="router" to="/agregarinventario">Agregar inventario</RouterLink>
+    <RouterLink to="/login"><v-btn icon=""><img src="../src/imagenes/user.ico" id="user"/></v-btn></RouterLink>
+    
   </div></div>
   <div class="cont" style="background-color: rgb(203, 160, 228)">
     <RouterView/>
@@ -33,8 +26,8 @@ import HelloWorld from './components/HelloWorld.vue'
   <div><h2>CONTACTANOS</h2></div>
   <div class="info">
     <div id="face">Facebook</div>
-    <div id="whats">Facebook</div>
-    <div id="ubi">Facebook</div>
+    <div id="whats">WhatsApp</div>
+    <div id="ubi">Dirección</div>
   </div>
   </footer>
 </template>
@@ -87,5 +80,9 @@ footer{
 }
 #ubi{
   width: 33%;
+}
+#user{
+  width: 100%;
+  height: 100%;
 }
 </style>
