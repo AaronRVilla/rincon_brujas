@@ -15,6 +15,7 @@
           class="form-input"
           type="password"
           id="password"
+          required
           placeholder="Password"
         />
         
