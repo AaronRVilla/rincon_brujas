@@ -60,7 +60,7 @@ footer{
   align-items: center;
   font-size: 1m;
   display: flex;
-  gap: 10vh;
+  gap: 8vh;
   text-decoration: none;
   margin-left: -300px;
 }
