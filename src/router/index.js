@@ -1,45 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import inicioView from '../views/inicioView.vue'
-
+import InicioView from '../views/InicioView.vue'
+import ProductosView from '../views/ProductosView.vue'
+import CategoriasView from '../views/CategoriasView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'inicio',
-      component: inicioView
+      name: 'InicioView',
+      component: InicioView
     },
     {
-      path:"/inventario",
-      name: 'inventario',
-      component:()=> import('../views/InventarioView.vue') 
+      path: '/CategoriasView',
+      name: 'CategoriasView',
+      component: CategoriasView
     },
     {
-      path: '/generarVenta',
-      name: 'generarventa',
-      component: ()=> import('../views/GenerarVentaView.vue')
-    }, {
-      path:"/apartado",
-      name: 'apartado',
-      component:()=> import('../views/ApartadoView.vue') 
-    },
-    {
-      path: '/agregarinventario',
-      name: 'agregarinventario',
-      component: ()=> import('../views/AgregarinventarioView.vue')
-    },
-    {
-      path: '/categorias',
-      name: 'categorias',
-      component: ()=> import('../views/CategoriasView.vue')
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: ()=> import('../views/loginView.vue')
-    },
+      path: '/ProductosView',
+      name: 'ProductosView',
+      component: ProductosView
+    }
   ]
 })
 
