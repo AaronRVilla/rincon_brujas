@@ -28,7 +28,7 @@ createApp(App).use(vuetify).mount('#app')
 app.use(vuetify)*/
 
 
-import './assets/main.css'
+// import './assets/main.css'
 
 import { createApp } from 'vue'
 //import VueRouter from 'vue-router'
