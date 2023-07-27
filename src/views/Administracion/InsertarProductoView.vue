@@ -1,15 +1,9 @@
 <script setup>
-  import  Inicionavbar  from '../components/Inicionavbar.vue'
-  import MenuInicio from '../components/MenuInicio.vue'
-  import Footer from '../components/Footer.vue'
+import insert from '../components/insert.vue'
 </script>
-
 <template>
-  <Inicionavbar/>
-  <MenuInicio/>
-  <Footer/>
+      <insert/>
 </template>
-
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 *

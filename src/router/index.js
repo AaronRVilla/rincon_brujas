@@ -3,26 +3,32 @@ import InicioView from '../views/InicioView.vue'
 import ProductosView from '../views/ProductosView.vue'
 import CategoriasView from '../views/CategoriasView.vue'
 import CuentaView from '../views/CuentaView.vue'
-import CajeroView from '../views/CajeroView.vue'
-import AdministracionView from '../views/AdministracionView.vue'
-import VerVentasView from '../views/VerVentasView.vue'
-import VerApartadosView from '../views/VerApartadosView.vue'
-import NuevoProductoView from '../views/NuevoProductoView.vue'
-import NuevaCategoriaView from '../views/NuevaCategoriaView.vue'
-import NuevoEmpleadoView from '../views/NuevoEmpleadoView.vue'
-import VerProductosView from '../views/VerProductosView.vue'
-import VerCategoriasView from '../views/VerCategoriasView.vue'
-import VerEmpleadosView from '../views/VerEmpleadosView.vue'
-import ActualizarProductoView from '../views/ActualizarProductoView.vue'
-import ActualizarCategoriaView from '../views/ActualizarCategoriaView.vue'
-
-import NuevaVentaView from '../views/NuevaVentaView.vue'
-import NuevoApartadoView from '../views/NuevoApartadoView.vue'
-import InfoUsuario from '../views/InfoUsuarioView.vue'
 import LogInView from '../views/LogInView.vue'
 import ForgotPasswordView from '../views/ForgorPasswordView.vue'
 import SignUpView from '../views/SignUpView.vue'
+
+import AdministracionView from '../views/Administracion/AdministracionView.vue'
+import VerVentasView from '../views/Administracion/VerVentasView.vue'
+import VerApartadosView from '../views/Administracion/VerApartadosView.vue'
+import NuevoProductoView from '../views/Administracion/NuevoProductoView.vue'
+import NuevaCategoriaView from '../views/Administracion/NuevaCategoriaView.vue'
+import NuevoEmpleadoView from '../views/Administracion/NuevoEmpleadoView.vue'
+import InicioAdministracionView from '../views/Administracion/InicioAdministracionView.vue'
+import VerProductosView from '../views/Administracion/VerProductosView.vue'
+import VerCategoriasView from '../views/Administracion/VerCategoriasView.vue'
+import VerEmpleadosView from '../views/Administracion/VerEmpleadosView.vue'
+import ActualizarProductoView from '../views/Administracion/ActualizarProductoView.vue'
+import ActualizarCategoriaView from '../views/Administracion/ActualizarCategoriaView.vue'
+import NuevaVentaView from '../views/Administracion/NuevaVentaView.vue'
+import NuevoApartadoView from '../views/Administracion/NuevoApartadoView.vue'
+import InfoUsuario from '../views/InfoUsuarioView.vue'
+
 import InicioCajeroView from '../views/InicioCajeroView.vue'
+import NuevaVentaCajeroView from '../views/NuevaVentaCajeroView.vue'
+import NuevoApartadoCajeroView from '../views/NuevoApartadoCajeroView.vue'
+import VerVentasCajeroView from '../views/VerVentasCajeroView.vue'
+import VerApartadosCajeroView from '../views/VerApartadosCajeroView.vue'
+import CajeroView from '../views/CajeroView.vue'
 
 const router = createRouter
 ({
@@ -51,7 +57,7 @@ const router = createRouter
                   children:
                   [
                         {
-                              path: '/',
+                              path: '/LogInView',
                               name: 'LogInView',
                               component: LogInView
                         },
@@ -79,24 +85,24 @@ const router = createRouter
                               component: InicioCajeroView
                         },
                         {
-                              path: '/NuevaVentaView',
-                              name: 'NuevaVentaView',
-                              component: NuevaVentaView
+                              path: '/NuevaVentaCajeroView',
+                              name: 'NuevaVentaCajeroView',
+                              component: NuevaVentaCajeroView
                         },
                         {
-                              path: '/NuevoApartadoView',
-                              name: 'NuevoApartadoView',
-                              component: NuevoApartadoView
+                              path: '/NuevoApartadoCajeroView',
+                              name: 'NuevoApartadoCajeroView',
+                              component: NuevoApartadoCajeroView
                         },
                         {
-                              path: '/VerVentasView',
-                              name: 'VerVentasView',
-                              component: VerVentasView
+                              path: '/VerVentasCajeroView',
+                              name: 'VerVentasCajeroView',
+                              component: VerVentasCajeroView
                         },
                         {
-                              path: '/VerApartadosView',
-                              name: 'VerApartadosView',
-                              component: VerApartadosView
+                              path: '/VerApartadosCajeroView',
+                              name: 'VerApartadosCajeroView',
+                              component: VerApartadosCajeroView
                         },
                         {
                               path: '/InfoUsuarioView',
@@ -111,6 +117,11 @@ const router = createRouter
                   component: AdministracionView,
                   children:
                   [
+                        {
+                              path: '/InicioAdministracionView',
+                              name: 'InicioAdministracionView',
+                              component: InicioAdministracionView
+                        },
                         {
                               path: '/NuevaVentaView',
                               name: 'NuevaVentaView',

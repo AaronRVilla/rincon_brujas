@@ -9,16 +9,22 @@ import { RouterLink } from 'vue-router'
                         <h1>El rincon de las brujas</h1>
                   </div>
                   <div>
-                        <router-link to="/">Inicio</router-link>
-                        <router-link to="/ProductosView">Productos</router-link>
-                        <router-link to="/CategoriasView">Categorias</router-link>
-                        <router-link to="/CuentaView">Cuenta</router-link>
-                        <router-link to="/InsertarProductoView">Insertar</router-link>
+                        <router-link class="link-box" to="/">Inicio</router-link>
+                        <router-link class="link-box" to="/ProductosView">Productos</router-link>
+                        <router-link class="link-box" to="/CategoriasView">Categorias</router-link>
+                        <router-link class="link-box" to="/CuentaView">Cuenta</router-link>
                   </div>
             </nav>
       </header>
 </template>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+*
+{
+      box-sizing: border-box;
+      font-family: 'Quicksand', 'Century Gothic', sans-serif;
+}
       header
       {
             height: 13vh;
@@ -52,4 +58,19 @@ import { RouterLink } from 'vue-router'
       {
             width: 400px;
       }
+
+      .link-box
+{
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 18px;
+}
+
+.link-box:hover
+{
+      color: black;
+      transition: all.3s;
+}
 </style>
