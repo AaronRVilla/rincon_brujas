@@ -60,9 +60,17 @@
                                                 </tr>
                                           </thead>
                                           <tbody>
-                                                <tr>
-                                                      <td></td>
-                                                      <td></td>
+                                                <tr v-for="apartado in listaapartado" :key="apartado.ID_APARTADO">
+                                                      <td>{{ apartado.ID_APARTADO }}</td>
+                                                      <td>{{ apartado.producto }}</td>
+                                                      <td>{{ apartado.cantidad }}</td>
+                                                      <td>{{ apartado.fecha }}</td>
+                                                      <td>{{ apartado.cliente }}</td>
+                                                      <td>{{ apartado.contacto }}</td>
+                                                      <td>{{ apartado.forma_pago }}</td>
+                                                      <td>{{ apartado.total_pagar }}</td>
+                                                      <td>{{ apartado.estado }}</td>
+                                                      <td>{{ apartado.abono }}</td>
                                                 </tr>
                                           </tbody>
                                     </v-table>
@@ -72,6 +80,36 @@
             </v-container>
       </v-app>
 </template>
-<script setup>
-import { RouterLink } from 'vue-router';
+<script>
+export default
+{
+      created:function()
+      {
+            this.consultarApartados();
+      },
+      data() 
+      {
+            return {
+            listaapartado: [],
+            }
+      },
+      methods:
+      {
+            consultarApartados()
+            {
+                  fetch('http://poocrud/ordenapartado/select')
+                  .then(respuesta=>respuesta.json())
+                  .then(datosRespuesta=>
+                  {
+                        console.log(datosRespuesta)
+                        
+                        if(datosRespuesta. msg=='success')
+                        {
+                              this.listaapartado=datosRespuesta.data;
+                        }
+                  })
+                  .catch(console.log)
+            }
+      }
+}
 </script>

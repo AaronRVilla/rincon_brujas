@@ -35,7 +35,7 @@
 <template>
       <v-app style="background-color: #cba0e4;">
             <v-container>
-                  <v-col>
+                  <v-col xs="12" sm="12" md="12" lg="12" xl="12" xxl="12" class="mx-auto">
                         <v-card>
                               <div class="options">
                                     <v-card-title class="table-title">Inventario</v-card-title>
@@ -55,12 +55,23 @@
                                                       <th>Color</th>
                                                       <th>Categoría</th>
                                                       <th>Imagen</th>
+                                                      <th>Opciones</th>
                                                 </tr>
                                           </thead>
                                           <tbody>
-                                                <tr>
-                                                      <td></td>
-                                                      <td></td>
+                                                <tr v-for="producto in listaproducto" :key="producto.id">
+                                                      <td>{{ producto.id }}</td>
+                                                      <td>{{ producto.nom_producto }}</td>
+                                                      <td>{{ producto.precio }}</td>
+                                                      <td>{{ producto.existencias }}</td>
+                                                      <td>{{ producto.talla }}</td>
+                                                      <td>{{ producto.color }}</td>
+                                                      <td>{{ producto.nombre }}</td>
+                                                      <td>{{ producto.imagen }}</td>
+                                                      <td>
+                                                            <v-btn class="bg-cyan-lighten-1">Modificar</v-btn>
+                                                            <v-btn class="bg-red-darken-1" v-on:click="ocultarRegistro(categoria.id)">Cancelar</v-btn>
+                                                      </td>
                                                 </tr>
                                                 <v-btn>Modificar</v-btn>
                                                 <v-btn>Cancelar</v-btn>
@@ -72,6 +83,37 @@
             </v-container>
       </v-app>
 </template>
-<script setup>
-import { RouterLink } from 'vue-router';
+<script>
+
+export default
+{
+      created:function()
+      {
+            this.consultarProductos();
+      },
+      data() 
+      {
+            return {
+            listaproducto: [],
+            }
+      },
+      methods:
+      {
+            consultarProductos()
+            {
+                  fetch('http://poocrud/producto/verproducto')
+                  .then(respuesta=>respuesta.json())
+                  .then(datosRespuesta=>
+                  {
+                        console.log(datosRespuesta)
+                        
+                        if(datosRespuesta. msg=='success')
+                        {
+                              this.listaproducto=datosRespuesta.data;
+                        }
+                  })
+                  .catch(console.log)
+            }
+      }
+}
 </script>

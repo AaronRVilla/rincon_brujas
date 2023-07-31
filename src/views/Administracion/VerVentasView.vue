@@ -47,18 +47,22 @@
                                     <v-table>
                                           <thead>
                                                 <tr>
-                                                      <th>Id venta</th>
+                                                      <th>Id Ord. venta</th>
                                                       <th>Producto</th>
                                                       <th>Cantidad</th>
-                                                      <th>Forma de pago</th>
                                                       <th>Cliente</th>
+                                                      <th>Forma de pago</th>
                                                       <th>Fecha</th>
                                                 </tr>
                                           </thead>
                                           <tbody>
-                                                <tr>
-                                                      <td></td>
-                                                      <td></td>
+                                                <tr v-for="venta in listaventas">
+                                                      <td>{{ venta.ID_VENTA }}</td>
+                                                      <td>{{ venta.nom_producto }}</td>
+                                                      <td>{{ venta.cantidad }}</td>
+                                                      <td>{{ venta.cliente }}</td>
+                                                      <td>{{ venta.forma_pago }}</td>
+                                                      <td>{{ venta.fecha }}</td>
                                                 </tr>
                                           </tbody>
                                     </v-table>
@@ -68,6 +72,36 @@
             </v-container>
       </v-app>
 </template>
-<script setup>
-import { RouterLink } from 'vue-router';
+<script>
+export default
+{
+      created:function()
+      {
+            this.consultarVentas();
+      },
+      data() 
+      {
+            return {
+            listaventas: [],
+            }
+      },
+      methods:
+      {
+            consultarVentas()
+            {
+                  fetch('http://poocrud/ordenventa/select')
+                  .then(respuesta=>respuesta.json())
+                  .then(datosRespuesta=>
+                  {
+                        console.log(datosRespuesta)
+                        
+                        if(datosRespuesta. msg=='success')
+                        {
+                              this.listaventas=datosRespuesta.data;
+                        }
+                  })
+                  .catch(console.log)
+            }
+      }
+}
 </script>

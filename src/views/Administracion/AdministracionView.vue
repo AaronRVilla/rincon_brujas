@@ -14,7 +14,43 @@ export default {
       <v-app id="inspire">
             <v-navigation-drawer v-model="drawer" style="background-color: #442d4d;">
                   <!--  -->
-                  hola
+                  <div class="mx-auto d-flex flex-column align-center justify-space-around">
+                        <router-link to="/ReporteVentasView">
+                              <v-btn class="bg-cyan-lighten-1">Reporte de ventas</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-cyan-lighten-1">Productos vendidos <br> por categoria</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-cyan-lighten-1">Existencias de mayor a menor</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-cyan-lighten-1">Precios mayores al promedio</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-cyan-lighten-1">Precio menores al promedio</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-cyan-lighten-1">Reporte de apartados</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-cyan-lighten-1">Productos sin vender</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-cyan-lighten-1">Monto total por orden de venta</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-cyan-lighten-1">Productos no vendidos por categoria</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-cyan-lighten-1">Cantidad de productos vendidos</v-btn>
+                        </router-link>
+                        <router-link to="">
+                              <v-btn class="bg-indigo-lighten-1">Existencias menores a X número</v-btn>
+                        </router-link>
+                        <router-link to=""></router-link>
+                        <router-link to=""></router-link>
+                  </div>
             </v-navigation-drawer>
 
             <v-app-bar style="background-color: #845b93;">

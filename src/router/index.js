@@ -7,6 +7,7 @@ import LogInView from '../views/LogInView.vue'
 import ForgotPasswordView from '../views/ForgorPasswordView.vue'
 import SignUpView from '../views/SignUpView.vue'
 
+//Pantallas del administrador
 import AdministracionView from '../views/Administracion/AdministracionView.vue'
 import VerVentasView from '../views/Administracion/VerVentasView.vue'
 import VerApartadosView from '../views/Administracion/VerApartadosView.vue'
@@ -23,12 +24,26 @@ import NuevaVentaView from '../views/Administracion/NuevaVentaView.vue'
 import NuevoApartadoView from '../views/Administracion/NuevoApartadoView.vue'
 import InfoUsuario from '../views/InfoUsuarioView.vue'
 
+//Reportes de administración
+import ReporteVentasView from '../views/Administracion/ReporteVentasView.vue'
+import ProductosVendidosPorCategoriaView from '../views/Administracion/ProductosVendidosPorCategoriaView.vue'
+import ExistenciasDeMayorMenorView from '../views/Administracion/ExistenciasDeMayorMenorView.vue'
+import PreciosMayoresPromedioView from '../views/Administracion/PreciosMayoresPromedioView.vue'
+import PreciosMenoresPromedioView from '../views/Administracion/PreciosMenoresPromedioView.vue'
+import ReporteApartadosView from '../views/Administracion/ReporteApartadosView.vue'
+import ProductosSinVenderView from '../views/Administracion/ProductosSinVenderView.vue'
+import MontoTotalPorOrdenVentaView from '../views/Administracion/MontoTotalPorOrdenVentaView.vue'
+import CantidadProductosVendidosView from '../views/Administracion/CantidadProductosVendidosView.vue'
+import ProductosNoVendidosPorCategoriaView from '../views/Administracion/ProductosNoVendidosPorCategoriaView.vue'
+
+//Pantallas del cajero
 import InicioCajeroView from '../views/InicioCajeroView.vue'
 import NuevaVentaCajeroView from '../views/NuevaVentaCajeroView.vue'
 import NuevoApartadoCajeroView from '../views/NuevoApartadoCajeroView.vue'
 import VerVentasCajeroView from '../views/VerVentasCajeroView.vue'
 import VerApartadosCajeroView from '../views/VerApartadosCajeroView.vue'
 import CajeroView from '../views/CajeroView.vue'
+import ProductosVendidosPorCategoriaViewVue from '../views/Administracion/ProductosVendidosPorCategoriaView.vue'
 
 const router = createRouter
 ({
@@ -186,6 +201,57 @@ const router = createRouter
                               path: '/InfoUsuarioView',
                               name: 'InfoUsuarioView',
                               component: InfoUsuario
+                        },
+                        //Vistas de reportes en administración
+                        {
+                              path: '/ReporteVentasView',
+                              name: 'ReporteVentasView',
+                              component: ReporteVentasView
+                        },
+                        {
+                              path: '/ProductosVendidosPorCategoriaView',
+                              name: 'ProductosVendidosPorCategoriaView',
+                              component: ProductosVendidosPorCategoriaViewVue
+                        },
+                        {
+                              path: '/ExistenciasDeMayorMenorView',
+                              name: 'ExistenciasDeMayorMenorView',
+                              component: ExistenciasDeMayorMenorView
+                        },
+                        {
+                              path: '/PreciosMayoresPromedioView',
+                              name: 'PreciosMayoresPromedioView',
+                              component: PreciosMayoresPromedioView
+                        },
+                        {
+                              path: '/PreciosMenoresPromedioView',
+                              name: 'PreciosMenoresPromedioView',
+                              component: PreciosMenoresPromedioView
+                        },
+                        {
+                              path: '/ReporteApartadosView',
+                              name: 'ReporteApartadosView',
+                              component: ReporteApartadosView
+                        },
+                        {
+                              path: '/ProductosSinVenderView',
+                              name: 'ProductosSinVenderView',
+                              component: ProductosSinVenderView
+                        },
+                        {
+                              path: '/MontoTotalPorOrdenVentaView',
+                              name: 'MontoTotalPorOrdenVentaView',
+                              component: MontoTotalPorOrdenVentaView
+                        },
+                        {
+                              path: '/ProductosNoVendidosPorCategoriaView',
+                              name: 'ProductosNoVendidosPorCategoriaView',
+                              component: ProductosNoVendidosPorCategoriaView
+                        },
+                        {
+                              path: '/CantidadProductosVendidosView',
+                              name: 'CantidadProductosVendidosView',
+                              component: CantidadProductosVendidosView
                         }
                   ]
             }
